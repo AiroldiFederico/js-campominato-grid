@@ -16,3 +16,18 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
+/*
+
+1 - creo la funzione che mi crea i quadrati
+
+*/
+
+
+function createElementHTML( tagHTML, classi) {
+
+    let element = document.createElement(tagHTML);
+    //aggiungo la classe
+    element.className = classi;
+}
+
+

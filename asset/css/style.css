@@ -122,19 +122,23 @@ h1 {
 }
 
 
+
+
 .grid {
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    display: flex !important;
+    flex-wrap: wrap !important;
     background-color: var(--color-1);
     font-size: 1rem;
     margin-top: 5rem;
     box-shadow: 4px 12px 13px 0px #141414;
+    max-width: 30%;
+    margin-bottom: 2rem;
 }
 
 .box {
     border: 1px solid black;
-    width: calc(100% / 2);
+    width: calc(100% / 10);
     aspect-ratio: 1;
     display: flex;
     justify-content: center;

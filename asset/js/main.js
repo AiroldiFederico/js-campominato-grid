@@ -25,15 +25,29 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 */
 
 
-function createElementHTML( tagHTML, classi) {
+function createElementHTML( tagHTML, classi, text) {
 
     let element = document.createElement(tagHTML);
     //aggiungo la classe
     element.className = classi;
+
+    //stampo i numeri all'interno
+    element.innerText = text;
+
+    return element;
 }
 
 
 //dichiaro la variabile associata al campo della griglia
-let grid = element.querySelector('.grid');
+let grid = document.querySelector('.grid')
 
 
+//ciclo di creazione
+for (let i = 1; i <= 100; i++) {
+
+    //assegno la funzione con i parametri che mi servono ad una variabile
+    const functionBox = createElementHTML("div", "box", i);
+
+    //creiamo i div nella grid
+    grid.append(functionBox);
+}

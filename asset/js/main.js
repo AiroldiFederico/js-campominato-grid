@@ -22,6 +22,10 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 2 - mi serve puntare al posto html dove inserire i quadrati
 
+3 - inserisco come parametro indice del ciclo così mi stampa il numero
+
+4 - rendo i quadrati clickabili
+
 */
 
 
@@ -47,6 +51,14 @@ for (let i = 1; i <= 100; i++) {
 
     //assegno la funzione con i parametri che mi servono ad una variabile
     const functionBox = createElementHTML("div", "box", i);
+
+    //quadrati al click
+    functionBox.addEventListener('click', function(){
+
+        //click sull'oggetto aggiunge la classe
+        this.classList.add('red')
+    })
+
 
     //creiamo i div nella grid
     grid.append(functionBox);

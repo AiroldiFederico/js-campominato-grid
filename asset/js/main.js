@@ -20,6 +20,8 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 
 1 - creo la funzione che mi crea i quadrati
 
+2 - mi serve puntare al posto html dove inserire i quadrati
+
 */
 
 
@@ -29,5 +31,9 @@ function createElementHTML( tagHTML, classi) {
     //aggiungo la classe
     element.className = classi;
 }
+
+
+//dichiaro la variabile associata al campo della griglia
+let grid = element.querySelector('.grid');
 
 

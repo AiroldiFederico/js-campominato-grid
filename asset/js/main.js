@@ -47,24 +47,25 @@ let grid = document.querySelector('.grid')
 
 
 //ciclo di creazione
-for (let i = 1; i <= 100; i++) {
+function createGrid(nCelle){
+    for (let i = 1; i <= nCelle; i++) {
 
-    //assegno la funzione con i parametri che mi servono ad una variabile
-    const functionBox = createElementHTML("div", "box", i);
+        //assegno la funzione con i parametri che mi servono ad una variabile
+        const functionBox = createElementHTML("div", "box", i);
 
-    //quadrati al click
-    functionBox.addEventListener('click', function(){
+        //quadrati al click
+        functionBox.addEventListener('click', function(){
 
-        //click sull'oggetto aggiunge la classe
-        this.classList.toggle('red')
-        console.log(this.innerText)
-    })
+            //click sull'oggetto aggiunge la classe
+            this.classList.toggle('red')
+            console.log(this.innerText)
+        })
 
 
-    //creiamo i div nella grid
-    grid.append(functionBox);
+        //creiamo i div nella grid
+        grid.append(functionBox);
+    }
 }
-
 
 
 
@@ -87,8 +88,13 @@ let selectDiff = document.getElementById("select");
 
 function campoMinato() {
 
+
+
+
     //valore numerico della difficoltà
     let difficoltà = parseInt(selectDiff.value);
+
+    createGrid(100);
 
 
 }

@@ -135,9 +135,13 @@ h1 {
     max-width: 30%;
 }
 
+:root {
+    --difficult: 10 
+}
+
 .box {
     border: 1px solid black;
-    width: calc(100% / 10);
+    width: calc(100% / var(--difficult));
     aspect-ratio: 1;
     display: flex;
     justify-content: center;

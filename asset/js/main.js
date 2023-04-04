@@ -95,5 +95,11 @@ function campoMinato() {
     
     createGrid(difficoltà);
 
-
+    if (difficoltà == 100) {
+        document.documentElement.style.setProperty("--difficult", "10");
+    } else if (difficoltà == 81) {
+        document.documentElement.style.setProperty("--difficult", "9");
+    } else if (difficoltà == 49) {
+        document.documentElement.style.setProperty("--difficult", "7");
+    }
 }

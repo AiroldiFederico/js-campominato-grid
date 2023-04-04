@@ -29,9 +29,13 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 */
 
 
-function createElementHTML( tagHTML, classi, text) {
+//dichiaro la variabile associata al campo della griglia
+let grid = document.querySelector('.grid')
 
+function createElementHTML( tagHTML, classi, text) {
+    
     let element = document.createElement(tagHTML);
+
     //aggiungo la classe
     element.className = classi;
 
@@ -40,10 +44,6 @@ function createElementHTML( tagHTML, classi, text) {
 
     return element;
 }
-
-
-//dichiaro la variabile associata al campo della griglia
-let grid = document.querySelector('.grid')
 
 
 //ciclo di creazione
@@ -80,21 +80,20 @@ btnPlay.addEventListener('click', function(){
 
 
 
-
-
-
 //selezione difficolta
 let selectDiff = document.getElementById("select");
 
 function campoMinato() {
 
-
+    //svuoto griglia
+    grid.innerHTML = "";
 
 
     //valore numerico della difficoltà
     let difficoltà = parseInt(selectDiff.value);
 
-    createGrid(100);
+    
+    createGrid(difficoltà);
 
 
 }

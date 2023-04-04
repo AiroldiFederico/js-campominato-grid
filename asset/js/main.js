@@ -56,10 +56,39 @@ for (let i = 1; i <= 100; i++) {
     functionBox.addEventListener('click', function(){
 
         //click sull'oggetto aggiunge la classe
-        this.classList.add('red')
+        this.classList.toggle('red')
+        console.log(this.innerText)
     })
 
 
     //creiamo i div nella grid
     grid.append(functionBox);
+}
+
+
+
+
+//funzione per far partire il gioco
+let btnPlay = document.getElementById('btn');
+btnPlay.addEventListener('click', function(){
+
+    //richiamo funzione
+    campoMinato();
+});
+
+
+
+
+
+
+
+//selezione difficolta
+let selectDiff = document.getElementById("select");
+
+function campoMinato() {
+
+    //valore numerico della difficoltà
+    let difficoltà = parseInt(selectDiff.value);
+
+
 }

@@ -16,18 +16,6 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
-/*
-
-1 - creo la funzione che mi crea i quadrati
-
-2 - mi serve puntare al posto html dove inserire i quadrati
-
-3 - inserisco come parametro indice del ciclo così mi stampa il numero
-
-4 - rendo i quadrati clickabili
-
-*/
-
 
 //dichiaro la variabile associata al campo della griglia
 let grid = document.querySelector('.grid')
